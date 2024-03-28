@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="sahil" id="rahul" style="background-color: orange; height: 300px;">
+          <h1>sahil sahu</h1>
+    </div>
+
+    <div class="sahil"  style="background-color: orange;">
+        <h1>sahil sahu</h1>
+  </div>
+
+    
+    <script>
+        const div1 = document.createElement('div')
+        console.log(div1)
+        div1.className = "main"
+        div1.setAttribute('title','generated title')
+        //div1.style.padding = "12px";
+        div1.innerHTML = "My name is sahil sahu <h1> create more such content <h1>  ";
+        
+        div1.innerHTML +="randi rona laga rakha he";
+        
+
+        div1.style.backgroundColor='green'
+        document.body.appendChild(div1)
+
+        const div2 = div1.cloneNode(true); // Cloning the existing div
+        const cc = document.getElementById('rahul')
+        cc.appendChild(div2);
+
+
+
+        // another way to append
+        // div1.innerText = "chai aur code";
+        // const addtext = document.createTextNode("chai aur code")
+        // div1.appendChild(addtext);
+
+    </script>
+</body>
+</html>

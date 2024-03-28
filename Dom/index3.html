@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="sahil" id="rahul" style="background-color: orange; height: 150px;">
+          <h1>sahil sahu</h1>
+    </div>
+
+    <div class="sahil"  style="background-color: orange;">
+        <h1>sahil sahu</h1>
+    </div>
+
+    <script>
+        const div1 = document.createElement('div')
+        div1.className = "main"
+        div1.setAttribute('title','generated title')
+        
+        // Method 1: Using innerText
+        div1.innerText = "chai aur code";
+        
+        // Method 2: Using createTextNode() and appendChild()
+        const addText = document.createTextNode("chai aur code");
+        div1.appendChild(addText);
+
+        // Creating an unordered list (ul)
+        const ul = document.createElement('ul');
+        
+        // Creating list items (li) and appending them to the ul
+        for (let i = 1; i <= 3; i++) {
+            const li = document.createElement('li');
+            li.textContent = 'Item ' + i;
+            ul.appendChild(li); // correct
+            ul += li; // wrong
+        }
+        
+        // Appending the ul to div1
+        div1.appendChild(ul);
+        
+        div1.style.backgroundColor='green'
+        document.body.appendChild(div1)
+
+        const div2 = div1.cloneNode(true); // Cloning the existing div
+        const cc = document.getElementById('rahul')
+        cc.appendChild(div2);
+
+    </script>
+</body>
+</html>

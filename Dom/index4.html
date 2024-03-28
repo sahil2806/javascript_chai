@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <ul id="language">
+        <li>javascipt</li>
+    </ul>
+
+    <script>
+        const  add = (tech) =>{
+            const t1 = document.getElementById('language')
+
+            const t2 = document.createElement('li')
+            t2.innerText = tech;
+
+            t1.appendChild(t2);
+        }
+
+        const  addoptimise = (tech) =>{
+            const t1 = document.getElementById('language')
+
+            const t2 = document.createElement('li')
+            t2.appendChild(document.createTextNode(tech))
+
+            t1.appendChild(t2);
+        }
+
+        const  arr = ["c++" , "c" , "kotlin" ,"java" , "python" , "typescript" , "c#" , "csharp" ,"rust" ]
+
+        arr.map((value)=>{
+            addoptimise(value)
+        })
+
+         const  secondLang = document.querySelector('li:nth-child(2)')
+        // secondLang.appendChild(document.createTextNode("  sahil"))
+        
+        const t2 = document.createElement('li')
+        t2.style.listStyleType = "square";
+        t2.appendChild(document.createTextNode("c++ evolve from c languge"))
+
+        secondLang.appendChild(t2)
+
+        // Remove how to remove particular instances
+        const last_lang = document.querySelectorAll('li')[10]
+        last_lang.remove()
+
+        // console.log(last_lang)
+
+    </script>
+
+</body>
+</html>
