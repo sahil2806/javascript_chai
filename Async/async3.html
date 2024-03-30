@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        .button {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #04aa6d;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+
+      .button:hover {
+        background-color: #3e8e41;
+      }
+
+      .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    </style>
+</head>
+<body id="body">
+    <h1>Start Should Change The Background Color Every Second</h1>
+    <button  class="button" id="start"> Start</button>
+    <button  class="button" id="stop" > Stop </button>
+    <script>
+        const changecolor = document.getElementById('body');
+        let setinterval ;
+        const tochangecolor = () =>{
+            let colormade = "#";
+            const color = "0123456789ABCDEF";
+            for(let i=0;i<6;i++){
+                colormade += color[Math.floor(Math.random()*16)]
+            }
+            changecolor.style.backgroundColor = colormade;
+        }
+        
+        document.querySelector('#start').addEventListener('click',(e)=>{
+            setinterval =  setInterval(tochangecolor,1000);
+        })
+
+        document.querySelector('#stop').addEventListener('click',(e)=>{
+            clearInterval(setinterval);
+            setinterval = null;
+        })
+
+        
+        
+        
+       
+    </script>
+</body>
+</html>
