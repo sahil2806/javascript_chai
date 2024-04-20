@@ -1,4 +1,4 @@
-const arr = [0,1,2,3,4,5,]
+// const arr = [0,1,2,3,4,5,]
 
 // console.log(arr[3])
 
@@ -40,9 +40,13 @@ const arr = [0,1,2,3,4,5,]
 // console.log(temp[3])
 // console.log(temp[4])
 
-// arr.map((e)=>{
-//   console.log(e)
+// const ans = arr.filter((e)=>{
+//     console.log(e)
+//     return e;
+
 // })
+
+// console.log(ans)
 
 
 // for(let i=0;i<arr.length;i++){
@@ -58,7 +62,7 @@ const arr = [0,1,2,3,4,5,]
 // console.log(arr)
 
 
-const arr1 = [6,7,8,9]
+// const arr1 = [6,7,8,9]
 
 // console.log(arr)
 // console.log(arr1)
@@ -83,8 +87,18 @@ const arr1 = [6,7,8,9]
 // console.log( land)
 
 
-console.log(Array.from({name:"sahil"}))  // it return empty array because it will not identify which part we have to convert into array like key and value
+// console.log(Array.from({name:"sahil"}))  
+// it return empty array because it will not identify which part we have to convert into array like key and value
 
+ 
+// console.log(Array.of(100,200,300,400)) 
+ // it will return array  after taking set of element
 
-console.log(Array.of(100,200,300,400))  // it will return array  after taking set of element
+ const numbers = [4, 9, 16, 25];
+ const newArr1 = numbers.map((val)=>val>=25)
 
+ console.log(newArr1)
+
+ const newArr2 = numbers.filter((val)=>val>=25)
+
+ console.log(newArr2)

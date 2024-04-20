@@ -1,0 +1,4 @@
+1)  global
+2) __dirname
+3) module
+4) 
