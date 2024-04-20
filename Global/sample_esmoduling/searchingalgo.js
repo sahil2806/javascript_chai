@@ -1,23 +1,22 @@
-
-
-const search = (arr,x) =>{
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]===x){
+const linear = (arr, x) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === x) {
             return i;
         }
     }
     return NaN;
-}
+};
 
-function add(){
-    return 5;
-}
+const binary = (arr, x) => {
+    // Binary search implementation
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === x) {
+            return i;
+        }
+    }
+    return NaN;
+};
 
-add();
+export { linear }; // Named export
 
- 
-module.exports ={
-    linear : search
-}
-
-console.log("sahil sahu");
+export default { binary }; // Default export
