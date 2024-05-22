@@ -9,3 +9,5 @@ console.log(binary);
 
 const ans = linear(arr,x);
 console.log(ans);
+
+ 

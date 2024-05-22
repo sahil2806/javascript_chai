@@ -28,6 +28,7 @@ new Promise((resolve,reject)=>{
 })
 
 
+
 const promiseThree = new Promise((resolve,reject)=>{
     setTimeout(function(){
         resolve({username:"chail",email:"chai@ecample.com"});

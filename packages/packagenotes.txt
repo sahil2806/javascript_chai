@@ -1,0 +1,13 @@
+# package management system
+# npm node package manager ,yarn is also used
+# The work of package manager  --> Dependencies Resolution
+# python --> pip package manager
+# Ruby --> Bundler
+# How  react depend on nodejs
+# packages nodejs --> minimist ,axious
+
+
+
+
+
+

@@ -1,4 +1,19 @@
-1)  global
-2) __dirname
-3) module
-4) 
+// Library -->  code to perform simple task
+// Framework --> combined multiple library it become framework
+// Node --> Node is a run time environment . we can interact with the operating system with the help of terminal using node js
+// node  is open source , js is asynchronous but node make js synchronous
+// node is just run time environment for javascript
+// Express is a framework
+// These are the features which give node (run time environment) -->making a network call ,
+
+
+a) global
+    1) process
+    2) __dirname
+    3) module
+
+# console.log(__dirname) // This global is not  always accessible. Find out those cases where is not accessible.
+# This variable is only available in CommonJS modules, which is the traditional module system in Node.js.
+# If you're using ES modules (ECMAScript modules), which is the newer standard, __dirname is not defined. This is because ES modules have a different module resolution mechanism.
+
+# How can we prepare command line script
