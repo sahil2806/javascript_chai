@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle_property {
+            border-radius: 50%;
+            border: 2px solid red;
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            color: green;
+        }
+    </style>
+</head>
+<body id="body">
+    <script>
+        var count = 1;
+
+        document.addEventListener('click', function (e) {
+            const x = e.clientX;
+            const y = e.clientY;
+            // console.log(count);
+
+            if (count == 3) {
+                const circles = document.querySelectorAll('.circle_property');
+                // console.log(circles);
+                circles.forEach( (circle)=>{
+                    document.body.removeChild(circle)
+;                });
+                count = 1;
+            }
+
+
+            const circle = document.createElement('div');
+            circle.textContent = "sahil";
+            circle.classList.add('circle_property');
+            circle.style.top = (y - 25) + "px";
+            circle.style.left = (x - 25) + "px";
+            document.body.appendChild(circle);
+
+            if(count==2){
+                const totol_circles =  document.querySelectorAll('.circle_property');
+                var a_x,a_y,b_x,b_y;
+                var num=0;
+                totol_circles.forEach((circle) =>{
+                    if(num==0){
+                        a_x = circle.style.left;
+                        a_y = circle.style.top;
+                        num++;
+                    }else{
+                        b_x = circle.style.left;
+                        b_y = circle.style.top;
+                    }
+                    a_x = parseFloat(a_x) + 50;
+                    a_y = parseFloat(a_y) + 50;
+                    b_x = parseFloat(b_x) + 50;
+                    b_y = parseFloat(b_y) + 50;
+                     
+                     
+                    
+                    
+                    var dis_x = Math.abs(a_x-b_x);
+                    var dis_y = Math.abs(a_y-b_y);
+
+                    
+                    
+                    var dis = Math.sqrt(dis_x*dis_x + dis_y*dis_y);
+
+                    console.log(dis)
+                     
+                    if(dis<=100){
+                        console.log("Intersecting");
+                    }else{
+                        console.log("Not Intersecting");
+                    }
+
+                })
+            }
+            count++;
+        });
+    </script>
+</body>
+</html>

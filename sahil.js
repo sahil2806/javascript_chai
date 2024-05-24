@@ -1,5 +1,5 @@
-#!/usr/bin/env node
+console.log("my name is sahil sahu");
 
-console.log("rahul sahu");
-process.stdout.write("Hii");
-console.log(process)
+const  variable = "sahil sahu";
+
+export {variable};

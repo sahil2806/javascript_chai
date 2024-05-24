@@ -1,0 +1,36 @@
+API --> 1> rest full API (representation state transfer)( resource oriented)
+    Every real life entity is expected to be represented as a resource.
+    Every time with restfull api request. we have to sent  the method of the request.
+    urls
+    In rest convention  data/ messages sent apart from url are sent in json
+    get,post ,put,patch,delete;
+
+    -->HTML only support get and post method.
+    Get --> retrieve info about the resource.
+    Post --> create side effect
+    Put --> Make complete update
+    Patch --> make partial update to the reource.
+    Delete --> delete a resource.
+
+    Differernce between get and post
+    --> In get method data is send in url  that means it get saved in history while in post methos data is not sent in url rather than request body / payload.
+
+    3 way
+    -->(1) request param  //  ex--> /movie/blackpanther
+    -->(2) Query param    // ex--> /category/electronics? comapany==samsung , order==desc && filter==price
+    -->(3) Request body  
+
+
+
+    
+2) grpc  (action oriented)
+gRPC stands for Remote Procedure Calls. It is an open-source, cross-platform 
+framework for high-performance remote procedure calls (RPCs). Google originally 
+developed gRPC as an internal RPC framework, but it became open source in 2015. 
+
+General question
+que1 what is crud api
+--> create read update delete this is the full form of crud.
+que2 server side rendering 
+que3 monolithic architecture
+que4 microservice
