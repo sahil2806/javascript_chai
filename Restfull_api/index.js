@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser') // Start Reading the Request-Body
 // Find the logic  why do we need to use body-parser
 
-const PORT = 3000 
+const PORT = 3000
 
 // Global Middleware to parse URL-encoded form bodies
 app.use(bodyParser.urlencoded({ extended: true }));  // By doing extended true  it can handeled nested objects and arrays.
