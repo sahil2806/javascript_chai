@@ -31,6 +31,6 @@ developed gRPC as an internal RPC framework, but it became open source in 2015.
 General question
 que1 what is crud api
 --> create read update delete this is the full form of crud.
-que2 server side rendering 
+que2 server side rendering
 que3 monolithic architecture
 que4 microservice
