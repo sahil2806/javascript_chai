@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tac-toe</title>
+    <style>
+        div{
+            width: 80%;
+            margin: auto;
+        }
+         table td{
+            border: 3px solid black;
+            margin: 0px;
+            height: 100px;
+            width: 100px;
+            font-size: 4em;
+            text-align: center;
+            padding: 0px;
+             
+         }
+         #container{
+             
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Tic Tac Toe</h1>
+        <table id="tbl">
+            <tr id="tr1">
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+            </tr>
+            <tr id="tr2">
+                <td id="4"></td>
+                <td id="5"></td>
+                <td id="6"></td>
+            </tr>
+            <tr id="tr3">
+                <td id="7"></td>
+                <td id="8"></td>
+                <td id="9"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="answe">
+        <h1>Game is running</h1>
+   </div>
+    
+
+    <script>
+        
+        let count = 1;
+         
+
+        let  box1 = document.getElementById('1');
+        let  box2 = document.getElementById('2');
+        let  box3 = document.getElementById('3');
+        let  box4 = document.getElementById('4');
+        let  box5 = document.getElementById('5');
+        let  box6 = document.getElementById('6');
+        let  box7 = document.getElementById('7');
+        let  box8 = document.getElementById('8');
+        let  box9 = document.getElementById('9');
+        let answerstore = document.getElementById("answe");
+        let element = document.createElement('h1');
+        element.innerHTML = "Win The game";
+         
+         
+        
+
+        let ans = false;
+
+        function check (){
+            
+            if(arr[0]==arr[1] && arr[1]==arr[2] && arr[0]!=''){
+                ans = true;
+            }
+            if(arr[3]==arr[4] && arr[4]==arr[5] && arr[3]!=''){
+                ans = true;
+            }
+            if(arr[6]==arr[7] && arr[7]==arr[8] && arr[6]!=''){
+                ans = true;
+            }
+
+            if(arr[0]==arr[3] && arr[3]==arr[6] && arr[0]!=''){
+                ans = true;
+            }
+            if(arr[1]==arr[4] && arr[4]==arr[7] && arr[1]!=''){
+                ans = true;
+            }
+            if(arr[2]==arr[5] && arr[5]==arr[8] && arr[2]!=''){
+                ans = true;
+            }
+
+            if(arr[0]==arr[4] && arr[4]==arr[8] && arr[0]!=''){
+                ans = true;
+            }
+            if(arr[2]==arr[4] && arr[4]==arr[6] && arr[2]!=''){
+                ans = true;
+            }
+
+
+        }
+
+        
+        let arr = ['','','','','','','','','']
+
+        box1.addEventListener('click',() =>{
+             
+            
+            if(count%2==1){
+                box1.innerText = 'X';
+                arr[0] = 'X';
+            }else{
+                box1.innerText = 'O';
+                arr[0] = 'O';
+            }
+            check();
+            if(ans == true){
+                element.innerHTML = "Win The game";
+                answerstore.append(element);
+            }
+
+            count++;
+             
+        })
+        box2.addEventListener('click',() =>{
+            
+            if(count%2==1){
+                box2.innerText = 'X';
+                arr[1] = 'X';
+            }else{
+                box2.innerText = 'O';
+                arr[1] = 'O';
+            }
+            check();
+            if(ans == true){
+                 element.innerHTML = "Win The game";
+                 answerstore.append(element);
+            }
+            count++;
+        })
+        box3.addEventListener('click',() =>{
+             
+            if(count%2==1){
+                box3.innerText = 'X';
+                arr[2] = 'X';
+            }else{
+                box3.innerText = 'O';
+                arr[2] = 'O';
+            }
+            check();
+            if(ans == true){
+                 element.innerHTML = "Win The game";
+                 answerstore.append(element);
+            }
+            count++;
+        })
+
+        box4.addEventListener('click',() =>{
+             
+            if(count%2==1){
+                box4.innerText = 'X';
+                arr[3] = 'X';
+            }else{
+                box4.innerText = 'O';
+                arr[3] = 'O';
+            }
+            check();
+            if(ans == true){
+                 element.innerHTML = "Win The game";
+                 answerstore.append(element);
+            }
+            count++;
+        })
+        box5.addEventListener('click',() =>{
+             
+            if(count%2==1){
+                box5.innerText = 'X';
+                arr[4] = 'X';
+            }else{
+                box5.innerText = 'O';
+                arr[4] = 'O';
+            }
+            check();
+            if(ans == true){
+                 element.innerHTML = "Win The game";
+                 answerstore.append(element);
+            }
+            count++;
+        })
+        box6.addEventListener('click',() =>{
+             
+            if(count%2==1){
+                box6.innerText = 'X';
+                arr[5] = 'X';
+            }else{
+                box6.innerText = 'O';
+                arr[5] = 'O';
+            }
+            check();
+            if(ans == true){
+                 element.innerHTML = "Win The game";
+                 answerstore.append(element);
+            }
+            count++;
+        })
+
+        box7.addEventListener('click',() =>{
+            
+            if(count%2==1){
+                box7.innerText = 'X';
+                arr[6] = 'X';
+            }else{
+                box7.innerText = 'O';
+                arr[6] = 'O';
+            }
+            check();
+            if(ans == true){
+                 element.innerHTML = "Win The game";
+                 answerstore.append(element);
+            }
+            count++;
+        })
+        box8.addEventListener('click',() =>{
+            
+            if(count%2==1){
+                box8.innerText = 'X';
+                arr[7] = 'X';
+            }else{
+                box8.innerText = 'O';
+                arr[7] = 'O';
+            }
+            check();
+            if(ans == true){
+                 element.innerHTML = "Win The game";
+                 answerstore.append(element);
+            }
+            count++;
+        })
+        box9.addEventListener('click',() =>{
+            
+            if(count%2==1){
+                box9.innerText = 'X';
+                arr[8] = 'X';
+            }else{
+                box9.innerText = 'O';
+                arr[8] = 'O';
+            }
+            check();
+            if(ans == true){
+                 element.innerHTML = "Win The game";
+                 answerstore.append(element);
+            }
+            count++;
+        })
+
+        
+
+
+         
+    </script>
+</body>
+</html>

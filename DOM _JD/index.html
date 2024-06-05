@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="./1.css" rel="stylesheet">
+    
+</head>
+<body>
+    <ul class="list">
+        <li class="items">
+            <a>Titaninc</a>
+        </li>
+        <li class="items">
+            <a>Avatar</a>
+        </li>
+        <li class="items">
+            <a>Inception</a>
+        </li>
+        <li class="items">
+            <a>Blood Diamond</a>
+        </li>
+        <li class="items">
+            <a>Kantara</a>
+        </li>
+    </ul>
+
+    <button onclick="call_the_function()" >Click me</button>
+
+    <script>
+
+        function call_the_function () {
+
+            console.log(event)
+            let link_element = document.createElement('link');
+            console.log(link_element)
+            link_element.setAttribute('href','./2.css');
+            link_element.setAttribute('rel','stylesheet');
+            let head_element = document.querySelector('head');
+            link_tag_find = head_element.querySelector('link');
+            console.log(link_tag_find)
+            head_element.removeChild(link_tag_find);
+            console.log(head_element)
+            head_element.append(link_element);
+            console.log(head_element)
+        }
+        
+
+
+    </script>
+</body>
+</html>

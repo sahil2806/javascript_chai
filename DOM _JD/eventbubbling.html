@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="outer" style="border: 4px solid red; padding: 20px;">
+        <div  id="inner" style="border: 4px solid black;padding: 20px;" >
+            <div id="btndiv" style="border: 4px solid rgb(18, 183, 43);padding: 20px;">
+                <h1>Heading</h1>
+                <button id="btn">Click me</button>
+            </div>
+        </div>
+    </div>
+<script>
+
+    outerdiv = document.getElementById('outer');
+    innerdiv = document.getElementById('inner');
+    btndiv = document.getElementById('btndiv');
+    btn = document.getElementById('btn');
+    
+    function handler(){
+        console.log(event.target);
+    }
+
+    outerdiv.addEventListener('click', handler)
+    innerdiv.addEventListener('click',handler )
+    btndiv.addEventListener('click', handler)
+    btn.addEventListener("click", handler);
+
+</script>
+</body>
+</html>
